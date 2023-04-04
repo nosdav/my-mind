@@ -1,4 +1,4 @@
-# My Mind
+# My Mind + NosDAV
 
 ![Screenshot](screenshot.png)
 
