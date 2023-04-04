@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Login Page</title>
 	<style>
 		body {
-			background: linear-gradient(to bottom, #4c4c9f, #4c75a3);
+			background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
 		}
+
 		button {
-			padding: 10px 20px;
-			background-color: white;
-			color: #4c4c9f;
+			background-color: #ffffff;
+			border-radius: 20px;
+			padding: 20px 50px;
+			font-size: 30px;
+			color: #000000;
 			border: none;
-			border-radius: 5px;
-			font-size: 16px;
 			cursor: pointer;
 		}
 	</style>
 </head>
 <body>
-	<div>
-		<button onclick="login()">Login</button>
-	</div>
+	<button onclick="login()">Login</button>
 
 	<script>
 		async function login() {
 			const publicKey = await window.nostr.getPublicKey();
-			window.location.href = `/my-mind/?url=https%3A%2F%2Fnosdav.nostr.rocks%2F${publicKey}%2Fnostr.mymind`;
+			const url = `https://nosdav.nostr.rocks/${publicKey}/nostr.mymind?url=https%3A%2F%2Fnosdav.nostr.rocks%2F${publicKey}%2Fnostr.mymind`;
+			window.location.href = url;
 		}
 	</script>
 </body>
