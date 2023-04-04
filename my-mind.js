@@ -1895,8 +1895,7 @@
     }
     async request(method, url, data) {
       let init20 = {
-        method,
-        credentials: "include"
+        method
       };
       if (data) {
         init20.body = data;
