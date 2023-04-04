@@ -14,8 +14,7 @@ export default class WebDAV extends Backend {
 
 	async request(method: string, url: string, data?: string) {
 		let init: RequestInit = {
-			method,
-			credentials: "include"
+			method
 		}
 		if (data) { init.body = data; }
 
