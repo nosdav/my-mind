@@ -1286,7 +1286,7 @@
     error(e) {
       setThrobber(false);
       let message = e instanceof Error ? e.message : e;
-      alert(`IO error: ${message}`);
+      console.error(`IO error: ${message}`);
     }
     submit() {
       switch (this.mode) {
