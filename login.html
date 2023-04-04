@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom, #4c4c9f, #4c75a3);
+		}
+		button {
+			padding: 10px 20px;
+			background-color: white;
+			color: #4c4c9f;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="login()">Login</button>
+	</div>
+
+	<script>
+		async function login() {
+			const publicKey = await window.nostr.getPublicKey();
+			window.location.href = `/my-mind/?url=https%3A%2F%2Fnosdav.nostr.rocks%2F${publicKey}%2Fnostr.mymind`;
+		}
+	</script>
+</body>
+</html>
