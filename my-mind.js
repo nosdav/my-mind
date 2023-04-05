@@ -3687,7 +3687,7 @@ ${text}`);
       this.position = [0, 0];
       this.fontSize = 15;
       let resolvedOptions = Object.assign({
-        root: "My Mind Map",
+        root: "nostr",
         layout: repo2.get("map")
       }, options);
       this.style.textContent = css;
