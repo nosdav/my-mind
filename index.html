@@ -35,6 +35,13 @@ window.fetch = async function(url, options) {
 
   return originalFetch.call(this, url, newOptions);
 };
+			
+			
+const urlParam = new URLSearchParams(window.location.search).get('url');
+const urlElement = document.querySelector('.url');
+if (urlElement && urlParam) {
+  urlElement.value = urlParam;
+}			
 		</script>
 
 	</head>
