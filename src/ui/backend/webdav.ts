@@ -35,7 +35,7 @@ export default class WebDAVUI extends BackendUI<WebDAV> {
 		var url = this.url.value;
 		localStorage.setItem(`${this.prefix}.url`, url);
 
-		if (url.match(/\.mymind$/)) { // complete file name
+		if (url.match(/\.mymind|\.json$/)) { // complete file name
 		} else { // just a path
 			if (url.charAt(url.length-1) != "/") { url += "/"; }
 			url += `${map.name}.${formatRepo.get("native")!.extension}`;
