@@ -1934,7 +1934,7 @@ ${text}`);
       var map = currentMap;
       var url = this.url.value;
       localStorage.setItem(`${this.prefix}.url`, url);
-      if (url.match(/\.mymind$/)) {
+      if (url.match(/\.mymind|\.json$/)) {
       } else {
         if (url.charAt(url.length - 1) != "/") {
           url += "/";
