@@ -28,7 +28,7 @@
 	<script>
 		async function login() {
 			const publicKey = await window.nostr.getPublicKey();
-			const url = `/my-mind/?url=https%3A%2F%2Fnosdav.nostr.rocks%2Fde7ecd1e2976a6adb2ffa5f4db81a7d812c8bb6698aa00dcf1e76adb55efd645%2Fnostr.mymind`;
+			const url = `/my-mind/?url=https%3A%2F%2Fnosdav.nostr.rocks%2F${publicKey}%2Fnostr.mymind`;
 			window.location.href = url;
 		}
 	</script>
